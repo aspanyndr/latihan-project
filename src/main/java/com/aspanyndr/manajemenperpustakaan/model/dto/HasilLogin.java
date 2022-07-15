@@ -1,9 +1,12 @@
 package com.aspanyndr.manajemenperpustakaan.model.dto;
 
-public class HasilLogin {
+import com.aspanyndr.manajemenperpustakaan.model.entity.DataAnggota;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
+public class HasilLogin {
     private boolean loginStatus;
-    private String pesan ="Selamat Datang di perpustakaan kami";
+    private String pesan;
 
     public boolean isLoginStatus() {
         return loginStatus;
@@ -13,10 +16,11 @@ public class HasilLogin {
         this.loginStatus = loginStatus;
     }
 
-    public String getPesan() {
+    public String getPesan( ) {
+        LoginDto loginDto = new LoginDto();
+        pesan ="Selamat Datang " + loginDto.getStatusPerpustakaan() + "di perpustakaan kami";
         return pesan;
     }
-
     public void setPesan(String pesan) {
         this.pesan = pesan;
     }

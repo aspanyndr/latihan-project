@@ -2,16 +2,16 @@ package com.aspanyndr.manajemenperpustakaan.model.dto;
 
 public class LoginDto {
 
-    private String userName;
+    private int idUser;
     private String password;
     private String statusPerpustakaan;
 
-    public String getUserName() {
-        return userName;
+    public int getIdUser() {
+        return idUser;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
     public String getPassword() {
